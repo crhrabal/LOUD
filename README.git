@@ -15,18 +15,18 @@ $ git init
 *) Cloning.
 
 A. Cloning an empty repo
-Make a new folder and cd to it.
-$git init
-$git add file
-$git commit -m "Message"
+## Make a new folder and cd to it.
+$ git init
+$ git add file
+$ git commit -m "Message"
 ## what about ssh as the transport instead of https?
-$git remote add origin https://github.com/username/reponame.git
-$git push -u origin master
+$ git remote add origin https://github.com/username/reponame.git
+$ git push -u origin master
 
 B. Cloning an existing repo
-$git clone https://github.com/username/reponame.git
-Make changes as needed.
-$git push
+$ git clone https://github.com/username/reponame.git
+## Make changes as needed.
+$ git push
 
 *) Add a file
 
