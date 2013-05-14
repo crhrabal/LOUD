@@ -15,18 +15,18 @@ $ git init
 *) Cloning.
 
 A. Cloning an empty repo
-Make a new folder and cd to it.
-$git init
-$git add file
-$git commit -m "Message"
+## Make a new folder and cd to it.
+$ git init
+$ git add file
+$ git commit -m "Message"
 ## what about ssh as the transport instead of https?
-$git remote add origin https://github.com/username/reponame.git
-$git push -u origin master
+$ git remote add origin https://github.com/username/reponame.git
+$ git push -u origin master
 
 B. Cloning an existing repo
-$git clone https://github.com/username/reponame.git
-Make changes as needed.
-$git push
+$ git clone https://github.com/username/reponame.git
+## Make changes as needed.
+$ git push
 
 *) Add a file
 
@@ -49,6 +49,14 @@ $ git pull origin master
 4. Make changes and push them to your repo.
 5. Navigate to your github repo and click the pull request button, fill out the form.
 6. Wait for the upstream author(s) to approve or deny your request.
+
+*) Keep your Fork up-to-date
+
+1) git remote add upstream git://github.com/dkrovich/LOUD.git
+## Checkout YOUR master branch
+2) git checkout master
+## Pull new commits
+3) git pull upstream master
 
 For more information on pull request, see:
 https://help.github.com/articles/using-pull-requests
