@@ -1,65 +1,59 @@
-Tips for using git.
+Tips for using git for LOUD development.
 
-*) Setup your environment.
+(*) Useful documentation
+
+http://git-scm.com/documentation
+https://help.github.com/articles/fork-a-repo
+https://help.github.com/articles/using-pull-requests
+
+(*) Setup your environment.
 
 $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 $ git config --global core.editor emacs
 
-*) Ready an environment for git.
+(*) Upload your public ssh key to github.
 
-$ mkdir github.LOUD
-$ cd github.LOUD
-$ git init
+Click the "Account Settings" button near the top right.  The icon looks like 
+a screwdriver and a wrench making an X.  Next click on ssh keys and
+upload your public ssh key.
 
-*) Cloning.
+(*) How to make a pull request on dkrovich's LOUD github repository
 
-A. Cloning an empty repo
-## Make a new folder and cd to it.
-$ git init
-$ git add file
-$ git commit -m "Message"
-## what about ssh as the transport instead of https?
-$ git remote add origin https://github.com/username/reponame.git
-$ git push -u origin master
+Visit this page: https://github.com/dkrovich/LOUD
 
-B. Cloning an existing repo
-$ git clone https://github.com/username/reponame.git
-## Make changes as needed.
+Click the "Fork" button near the top right of the page.
+
+$ mkdir dkrovich.LOUD
+$ cd dkrovich.LOUD
+$ cd dkrovich.LOUD
+$ git clone git@github.com:dkrovich/LOUD.git
+## Make changes and commit them
+$ emacs foo
+$ git commit
+## Push commits to your repository
 $ git push
+## Navigate to your github repository and click the "Pull Request" button.
+Fill out the form and wait for upstream to approve or deny.
 
-*) Add a file
+(*) Keep your Fork up-to-date
+
+$ git remote add upstream git://github.com/dkrovich/LOUD.git
+## Checkout YOUR master branch
+$ git checkout master
+## Pull new commits
+$ git pull upstream master
+
+(*) Adding files.
 
 $ touch README.git
 $ git add README.git
 $ git commit -m "Adding README.git"
 $ git push origin master
 
-*) Using remotes.  (Use clone unless you have write access)
+(*) Directly commit to a repository  (Use clone unless you have write access)
 
 $ git remote add origin git@github.com:dkrovich/LOUD.git
 $ git pull origin master
-
-*) Submitting a Pull Request
-
-1. Go to the github page of the repo you want to work on.
-2. Click the fork button. Github will then automagically make a new repo in your account.
-## Docs on forking:  https://help.github.com/articles/fork-a-repo
-3. Clone your new repo
-4. Make changes and push them to your repo.
-5. Navigate to your github repo and click the pull request button, fill out the form.
-6. Wait for the upstream author(s) to approve or deny your request.
-
-*) Keep your Fork up-to-date
-
-1) git remote add upstream git://github.com/dkrovich/LOUD.git
-## Checkout YOUR master branch
-2) git checkout master
-## Pull new commits
-3) git pull upstream master
-
-For more information on pull request, see:
-https://help.github.com/articles/using-pull-requests
-
-For information on using git and github in general see:
-https://help.github.com/
+## make changes
+$ git push origin master
