@@ -26,7 +26,6 @@ Click the "Fork" button near the top right of the page.
 
 $ mkdir dkrovich.LOUD
 $ cd dkrovich.LOUD
-$ cd dkrovich.LOUD
 $ git clone git@github.com:dkrovich/LOUD.git
 ## Make changes and commit them
 $ emacs foo
@@ -53,7 +52,11 @@ $ git push origin master
 
 (*) Directly commit to a repository  (Use clone unless you have write access)
 
+$ mkdir gitdir
+$ cd gitdir
+$ git init
 $ git remote add origin git@github.com:dkrovich/LOUD.git
 $ git pull origin master
 ## make changes
+$ git commit
 $ git push origin master
