@@ -58,5 +58,6 @@ $ git init
 $ git remote add origin git@github.com:dkrovich/LOUD.git
 $ git pull origin master
 ## make changes
+$ git add <changed files>
 $ git commit
 $ git push origin master
