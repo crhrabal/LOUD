@@ -27,13 +27,17 @@ Click the "Fork" button near the top right of the page.
 $ mkdir dkrovich.LOUD
 $ cd dkrovich.LOUD
 $ git clone git@github.com:dkrovich/LOUD.git
+## In this case, if you followed the instructions it'd be:
+## "git clone git@github.com:username/LOUD.git" as you've already forked it
 ## Make changes and commit them
 $ emacs foo
 $ git commit
 ## Push commits to your repository
 $ git push
-## Navigate to your github repository and click the "Pull Request" button.
-Fill out the form and wait for upstream to approve or deny.
+## Navigate to your github repository and click the "Pull Requests" button.
+## Click "New pull request"
+## Fill out the form and wait for upstream to approve or deny. (make sure you're
+##  your comparing your master to the upstream master)
 
 (*) Keep your Fork up-to-date
 
